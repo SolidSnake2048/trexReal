@@ -152,7 +152,7 @@ function reset(){
 }
 function spawnClouds(){
   if(frameCount%60==0){
-    clouds=createSprite(600,height+50,20,20);
+    clouds=createSprite(width,height+50,20,20);
     clouds.scale=0.5;
     clouds.addImage("cloud_Image",cloudImage);
     clouds.velocityX=-3-score/100;
@@ -160,7 +160,7 @@ function spawnClouds(){
     clouds.depth=trex.depth;
     trex.depth=trex.depth+1;
     cloudsGroup.add(clouds);
-    clouds.lifetime=200;
+    clouds.lifetime=width;
      }
 }
 function spawnObstacles(){
@@ -186,7 +186,7 @@ function spawnObstacles(){
     obstacles.depth=trex.depth;
     trex.depth=trex.depth+1;
     obstaclesGroup.add(obstacles);
-    obstacles.lifetime=200;
+    obstacles.lifetime=width;
   }
 }
 
